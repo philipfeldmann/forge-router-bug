@@ -1,0 +1,18 @@
+modules:
+  confluence:globalPage:
+    - key: router-bug-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: router-bug
+      route: hello-world
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+    tunnel:
+      port: 3000
+app:
+  id: ari:cloud:ecosystem::app/c394b10c-5eff-4036-9dfd-062633e78a22
